@@ -3,7 +3,7 @@
 ## Directory layout
 
 ```
-<plan root>/YYMMDD-HHMM-<slug>/   # projects/<project>/plans/ or root plans/
+<plan root>/YYMMDD-HHMM-<slug>/   # plans/<project>/ or plans/general/
 ├── plan.md                      # index: frontmatter, overview, phases table
 ├── phase-01-<name>.md           # one file per phase
 ├── phase-02-<name>.md

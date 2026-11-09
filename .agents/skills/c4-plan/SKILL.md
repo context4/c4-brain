@@ -19,9 +19,9 @@ Write plan content (titles, prose, questions to the user) in the user's language
 
 ## Plan location & invariants
 
-- **Plan root**: if the session's current project (see «Текущий проект сессии» in `AGENTS.md`) is set, plans live in `projects/<project>/plans/YYMMDD-HHMM-<slug>/`; otherwise in the root `plans/YYMMDD-HHMM-<slug>/` (local time, `date +%y%m%d-%H%M`; slug in kebab-case Latin). If no project is chosen yet and the work may belong to one, ask «С каким проектом работаем?» first.
+- **Plan root**: if the session's current project (see «Текущий проект сессии» in `AGENTS.md`) is set, plans live in `plans/<project>/YYMMDD-HHMM-<slug>/`; otherwise in `plans/general/YYMMDD-HHMM-<slug>/` (local time, `date +%y%m%d-%H%M`; slug in kebab-case Latin). If no project is chosen yet and the work may belong to one, ask «С каким проектом работаем?» first.
 - Files: `plan.md` (index) and `phase-NN-<name>.md` (execution detail). Create them by hand; there is no scaffolding tool. Format: `references/plan-format.md`.
-- **Active plan**: when a subcommand gets no path, read the frontmatter of every `plan.md` under the plan root (current project's `plans/`, else root `plans/`); pick the one with `status: in-progress`, else the newest `pending`. If none or several match ambiguously, ask the user.
+- **Active plan**: when a subcommand gets no path, read the frontmatter of every `plan.md` under the plan root (`plans/<project>/`, else `plans/general/`); pick the one with `status: in-progress`, else the newest `pending`. If none or several match ambiguously, ask the user.
 - Plan files are the source of truth. Runtime task lists are only a projection (`references/task-management.md`).
 
 ## Mode & subcommand routing
@@ -62,7 +62,7 @@ Write plan content (titles, prose, questions to the user) in the user's language
 
 Resolve flags first, then load only the references the selected route needs.
 
-1. **Intake & scope challenge** — read context, restate scope (`references/scope-challenge.md`). If a `c4-brainstorm` result exists (in the conversation or `wiki/syntheses/`), reuse its outcome, constraints, non-goals and acceptance criteria instead of asking again; if the outcome is still unclear or there are competing approaches, suggest `c4-brainstorm` first.
+1. **Intake & scope challenge** — read context, restate scope (`references/scope-challenge.md`). If a `c4-brainstorm` result exists (in the conversation or `wiki/<project>/syntheses/`), reuse its outcome, constraints, non-goals and acceptance criteria instead of asking again; if the outcome is still unclear or there are competing approaches, suggest `c4-brainstorm` first.
 2. **Research & scouting** (hard/deep/two/debate) — `references/research-phase.md`.
 3. **Draft** — design the solution (`references/solution-design.md`), then write `plan.md` and phase files (`references/plan-format.md`). Self-verify paths and symbols as you write (`references/verification-roles.md`, Fact Checker).
 4. **Red-team gate** (when the mode requires it) — `references/red-team-workflow.md`.

@@ -5,7 +5,7 @@ Close finished or abandoned plans. Archiving changes status only; plan files sta
 ## Plan resolution
 
 1. Path argument, if given.
-2. Otherwise every `plan.md` under the plan root (the current project's `plans/`, else root `plans/`).
+2. Otherwise every `plan.md` under the plan root (`plans/<project>/`, else `plans/general/`).
 
 ## Workflow
 

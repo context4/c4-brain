@@ -21,11 +21,11 @@ Turn an accepted plan into working, verified changes. Talk to the user in their 
 | Outcome unclear or there are real alternatives | Stop: suggest `c4-brainstorm`, then `c4-plan` |
 | Large change without a plan | Stop: suggest `c4-plan` first |
 
-Plan root: the current project's `projects/<slug>/plans/`, else root `plans/` (see «Текущий проект сессии» in `AGENTS.md`; if the project is unclear, ask «С каким проектом работаем?»). To find the active plan, read the frontmatter of every `plan.md` there; take `in-progress` first, then the newest `pending`.
+Plan root: `plans/<project>/` for the current project, else `plans/general/` (see «Текущий проект сессии» in `AGENTS.md`; if the project is unclear, ask «С каким проектом работаем?»). To find the active plan, read the frontmatter of every `plan.md` there; take `in-progress` first, then the newest `pending`.
 
 ## Plan route
 
-1. **Load.** Read `plan.md` and every phase file. If the plan has `project:`, read that project's `project.yaml`, `README.md` and `decisions.md` too — its goal, non-goals and past decisions constrain the work. Files the work produces go to the project's `outputs/` (results) or `assets/` (inputs), never loose in the project root. Check the plan's open questions; if any block phase 1, ask before touching files.
+1. **Load.** Read `plan.md` and every phase file. If the plan has `project:`, read that project's `project.yaml`, `README.md` and `decisions.md` too — its goal, non-goals and past decisions constrain the work. Results the work produces go to `outputs/<project>/`, working inputs to `projects/<project>/assets/`; nothing loose in the project passport root. Check the plan's open questions; if any block phase 1, ask before touching files.
 2. **Mark start.** Set `status: in-progress` in `plan.md` frontmatter.
 3. **For each phase, in dependency order:**
    1. **Re-scout.** Quick `c4-scout` pass over the phase's Files list: do the paths and symbols still exist as the plan says? If reality differs, adjust the steps and note the deviation in the phase file under `## Deviations`. If the difference changes the design, stop and ask.
@@ -54,7 +54,7 @@ For small, clear changes without a plan:
 
 ## Rules
 
-- Never edit `raw/`. Never create a project — if the work turns out to be a new project, suggest `c4-project` in one line.
+- Never edit saved files in `raw/`. Never create a project — if the work turns out to be a new project, suggest `c4-project` in one line.
 - Do not silently change scope. Anything you skipped, deferred or could not verify goes into the final report explicitly.
 - Do not reverse a decision recorded in the plan, the project README or `decisions.md` without asking.
 - Stop and ask on: destructive actions (deleting data, force-pushing, dropping tables), secrets, anything outward-facing (publishing, sending, deploying).

@@ -82,7 +82,7 @@ Include `--yagni` in the handoff only if the user passed it.
 ## Boundaries
 
 - Never claim current behavior from intent alone.
-- Never edit `raw/`; never expose secrets or unrelated private files.
+- Never edit saved files in `raw/`; never expose secrets or unrelated private files.
 - List unresolved questions last.
 
 ## References

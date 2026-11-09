@@ -1,6 +1,6 @@
 ---
 name: c4-scout
-description: "Fast read-only discovery of the files that matter for a task — in this brain (index.md, wiki/, projects/, plans/, raw/) or in a code repository. Returns a short, ranked file map with one line on why each file matters. Use before planning, implementing, or answering a question that needs repository context. Invoke to find where something lives, gather context for a task, or orient in an unfamiliar folder."
+description: "Fast read-only discovery of the files that matter for a task — in this brain (index.md and the per-project sections of raw/, wiki/, plans/, outputs/, projects/) or in a code repository. Returns a short, ranked file map with one line on why each file matters. Use before planning, implementing, or answering a question that needs repository context. Invoke to find where something lives, gather context for a task, or orient in an unfamiliar folder."
 license: MIT
 metadata:
   author: c4-brain
@@ -15,14 +15,14 @@ Find the smallest set of files a task actually needs, fast, without changing any
 
 - **Read-only.** Never edit, move, or create files while scouting (the optional report in step 5 is the only exception).
 - **Narrow before reading.** List and search first; open a file only when its name or a search hit says it is relevant. Read large files by section, not whole.
-- **Skip noise:** `.git/`, `node_modules/`, build output, caches, lockfiles, binaries, media in `raw/videos` and `raw/images` (look at names only), `.env*` and anything that looks like a secret — never open those.
+- **Skip noise:** `.git/`, `node_modules/`, build output, caches, lockfiles, binaries, binary media in `raw/` (look at names and `.meta.yaml` only), `.env*` and anything that looks like a secret — never open those.
 - **Evidence, not guesses.** Every file in the result is something you actually saw. If you did not find it, say so.
 
 ## Procedure
 
 1. **Frame the target.** Restate in one line what you are looking for and where (default: the current working directory). Pick 3–6 search terms: names, synonyms, likely file names, in both Russian and English when the content may be in either.
 2. **Start from the maps.**
-   - In this brain: read `index.md` first, then `projects/*/project.yaml` and the `plan.md` frontmatter in `plans/` and `projects/*/plans/`. With a current project, start inside `projects/<slug>/` (its `project.yaml → wiki` lists the relevant wiki pages). These maps usually point straight at the right files.
+   - In this brain: read `index.md` first, then `projects/*/project.yaml` and the `plan.md` frontmatter in `plans/*/`. With a current project, search its sections first — `wiki/<slug>/`, `raw/<slug>/`, `plans/<slug>/`, `projects/<slug>/` — then `wiki/general/` (its `project.yaml → wiki` lists linked pages). These maps usually point straight at the right files.
    - In a code repo: read the root README, the agent instructions (`CLAUDE.md` / `AGENTS.md`), and the manifest (`package.json`, `pyproject.toml`, `go.mod`, …) to learn the layout.
 3. **Search.** Use file-name globbing and content search with the terms from step 1. In the brain also follow `[[wiki-links]]` and the `sources:` / `projects:` frontmatter of the pages you open. In code, follow imports and call sites one hop from each hit.
 4. **Fan out only when it is big.** If the area is large and the runtime offers subagents, split by directory (one subagent per top-level area, each told to stay read-only and return paths with one-line reasons). Otherwise keep going sequentially. Stop once new searches stop producing new relevant files.
