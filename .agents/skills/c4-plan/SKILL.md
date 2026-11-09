@@ -19,9 +19,9 @@ Write plan content (titles, prose, questions to the user) in the user's language
 
 ## Plan location & invariants
 
-- All plans live under `plans/YYMMDD-HHMM-<slug>/` at the repository root (local time, `date +%y%m%d-%H%M`; slug in kebab-case Latin).
+- **Plan root**: if the session's current project (see «Текущий проект сессии» in `AGENTS.md`) is set, plans live in `projects/<project>/plans/YYMMDD-HHMM-<slug>/`; otherwise in the root `plans/YYMMDD-HHMM-<slug>/` (local time, `date +%y%m%d-%H%M`; slug in kebab-case Latin). If no project is chosen yet and the work may belong to one, ask «С каким проектом работаем?» first.
 - Files: `plan.md` (index) and `phase-NN-<name>.md` (execution detail). Create them by hand; there is no scaffolding tool. Format: `references/plan-format.md`.
-- **Active plan**: when a subcommand gets no path, read the frontmatter of every `plans/*/plan.md`; pick the one with `status: in-progress`, else the newest `pending`. If none or several match ambiguously, ask the user.
+- **Active plan**: when a subcommand gets no path, read the frontmatter of every `plan.md` under the plan root (current project's `plans/`, else root `plans/`); pick the one with `status: in-progress`, else the newest `pending`. If none or several match ambiguously, ask the user.
 - Plan files are the source of truth. Runtime task lists are only a projection (`references/task-management.md`).
 
 ## Mode & subcommand routing
@@ -75,9 +75,9 @@ Resolve flags first, then load only the references the selected route needs.
 
 ## Repository integration
 
-- **Project link.** Check whether the plan belongs to an existing project: list `projects/*/README.md` and match by goal and topic. If one clearly matches, set `project: <name>` in `plan.md` frontmatter and add a link to the plan under the `## Планы` heading of `projects/<name>/README.md` (add that heading if the README lacks it): `- [<title>](../../plans/<plan-dir>/plan.md) — <status>`. If the match is uncertain, ask.
+- **Project context.** With a current project, read its `project.yaml`, `README.md` and `decisions.md` before drafting: the project's goal, non-goals and past decisions are constraints. Set `project: <slug>` in `plan.md` frontmatter. Significant design choices made while planning go into the project's `decisions.md`.
 - **Never create a project.** If no project matches, leave `project:` empty. If the work looks like a new project, suggest one line: «Похоже на отдельный проект. Завести через `c4-project`?» — and continue without it.
-- **Log.** Append to the root `log.md` (append-only): `## [YYYY-MM-DD] plan | <title>` plus one line with the plan path. Validate, red-team and archive also append a line in the same format (`plan | Validated: <title>`, and so on).
+- **Log.** Append `## [YYYY-MM-DD] plan | <title>` plus one line with the plan path to the project's `log.md` (if any) and one line to the root `log.md`. Validate, red-team and archive also append a line in the same format (`plan | Validated: <title>`, and so on).
 
 ## References
 

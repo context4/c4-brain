@@ -16,8 +16,8 @@ Persist the accepted brainstorm as a wiki synthesis. Write the page in the user'
    ---
    ```
 3. **Body:** short summary; Outcome, Constraints, Non-goals, Acceptance criteria; Trade-offs and Better approaches when present; options considered; chosen direction and why; unresolved questions last. Link evidence with `[[wiki-links]]`.
-4. **Project link:** if the brainstorm belongs to an existing project, add a link to the page in `projects/<name>/README.md`. Never create a project.
+4. **Project link:** with a current project, add the page to `wiki:` in its `project.yaml` and a `decisions.md` entry that links to it. Never create a project.
 5. **Index:** add a line under `## Синтезы` in `index.md`: `- [[wiki/syntheses/<slug>]] — <one-line summary>` (replace the `_Пусто._` placeholder if present).
-6. **Log:** append to `log.md`: `## [YYYY-MM-DD] brainstorm | <title>` plus one line with the page path.
+6. **Log:** append to the root `log.md` (and the project's `log.md`, if any): `## [YYYY-MM-DD] brainstorm | <title>` plus one line with the page path.
 
 Use the local date (`date +%F`).

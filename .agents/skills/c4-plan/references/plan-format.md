@@ -3,14 +3,14 @@
 ## Directory layout
 
 ```
-plans/YYMMDD-HHMM-<slug>/
+<plan root>/YYMMDD-HHMM-<slug>/   # projects/<project>/plans/ or root plans/
 ├── plan.md                      # index: frontmatter, overview, phases table
 ├── phase-01-<name>.md           # one file per phase
 ├── phase-02-<name>.md
 └── reports/                     # optional: research, scouting, debate candidates
 ```
 
-Create the directory and files by hand. Before writing, check `plans/` for an existing plan on the same topic; extend it instead of duplicating, and note related plans in `blockedBy` / `blocks`.
+Create the directory and files by hand. Before writing, check the plan root for an existing plan on the same topic; extend it instead of duplicating, and note related plans in `blockedBy` / `blocks`.
 
 ## plan.md frontmatter (required)
 
@@ -21,7 +21,7 @@ description: "One-sentence summary"
 status: pending        # pending | in-progress | completed | cancelled | archived
 priority: P2           # P1 high | P2 medium | P3 low
 effort: 4h             # sum of phase estimates
-project: ""            # name of an existing projects/<name>/, else empty
+project: ""            # slug of the current project, else empty
 issue: ""              # GitHub issue number, if any
 branch: ""             # `git branch --show-current`, if in a git repo
 tags: []               # e.g. feature, bugfix, refactor, docs, infra, content

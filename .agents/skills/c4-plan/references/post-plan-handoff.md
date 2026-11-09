@@ -4,8 +4,8 @@ Always end with an explicit handoff, in the user's language:
 
 ```markdown
 ### Plan
-- Path: `plans/<plan-dir>/plan.md`
-- Project: `<name>` (linked in `projects/<name>/README.md`) — or "none"
+- Path: `<plan root>/<plan-dir>/plan.md`
+- Project: `<slug>` — or "none"
 - Status: ready for implementation | needs revision (why)
 - Phases:
   1. <Phase 1 title> — <one line>
@@ -13,8 +13,8 @@ Always end with an explicit handoff, in the user's language:
 - Open questions: <list or "none">
 
 ### Next step
-Implement with `c4-cook plans/<plan-dir>` — it runs the plan phase by phase, verifies each phase and writes progress back into the plan files.
-Optional before that: `c4-plan validate plans/<plan-dir>` or `c4-plan red-team plans/<plan-dir>`.
+Implement with `c4-cook <plan root>/<plan-dir>` — it runs the plan phase by phase, verifies each phase and writes progress back into the plan files.
+Optional before that: `c4-plan validate <plan-dir>` or `c4-plan red-team <plan-dir>`.
 ```
 
 Add when relevant: the GitHub issue URL (`--github`), the `c4-project` suggestion if no project matched, and for `--parallel` which phases can run concurrently.

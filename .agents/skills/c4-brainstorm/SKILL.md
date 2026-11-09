@@ -40,7 +40,7 @@ An accepted plan or design that already records the four fields satisfies the co
 
 ## Brain integration
 
-- **Existing project.** List `projects/*/README.md`. If the topic clearly belongs to one, read its README (and `interview.md` when present) before anything else; reuse its goal and done-criterion as constraints, and link the result to that project. If the match is uncertain, ask.
+- **Current project.** Use the session's current project (see «Текущий проект сессии» in `AGENTS.md`); if it is unclear and the topic may belong to one, ask «С каким проектом работаем?». With a project, read its `project.yaml`, `README.md`, `interview.md` and `decisions.md` before anything else; reuse its goal and done-criterion as constraints. The chosen approach is recorded in the project's `decisions.md` (date, decision, why, options considered).
 - **Never create a project.** If the idea looks like a new project, say one line: «Похоже на отдельный проект. Завести через `c4-project`?» — and continue without it.
 - **Wiki context.** Read `index.md` and only the wiki pages relevant to the topic; cite them as evidence.
 
