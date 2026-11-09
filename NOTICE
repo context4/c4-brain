@@ -1,0 +1,6 @@
+c4-brain
+
+.claude/skills/c4-plan is adapted from the "ak:plan" skill of AgentKit
+(metadata author: agentkit), distributed under the MIT License. It was renamed
+to c4:plan and stripped of dependencies on other AgentKit skills and CLIs.
+The original MIT permission notice applies to that portion of the code.
