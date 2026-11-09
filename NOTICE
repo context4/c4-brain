@@ -10,3 +10,7 @@ They were renamed and stripped of dependencies on other AgentKit skills, CLIs
 and services. The original MIT permission notice applies to those portions.
 
 c4-project, c4-cook and c4-scout are original to c4-brain.
+
+.agents/skills/context4, context4-setup and context4-workflows are the
+Context4 skills as published at https://ctx4.me/docs/skills-index.json
+(MIT; see the LICENSE and ATTRIBUTION.md inside each folder).
