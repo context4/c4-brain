@@ -190,7 +190,7 @@ projects/<проект>/
 | `c4-plan` | План по шагам с проверками |
 | `c4-cook` | Делает план шаг за шагом и проверяет каждый |
 | `c4-scout` | Быстро находит нужные файлы, ничего не меняя |
-| `context4` · `context4-setup` · `context4-workflows` | Подключение и работа с CRM, задачами, почтой, GitHub через [Context4](https://ctx4.me) |
+| `context4` · `context4-setup` · `context4-workflows` | Подключение и работа с CRM, задачами, почтой, GitHub через [Context4](https://context4.me) |
 
 Обычный путь большой задачи: **брейншторм → план → «делай»**. Свои скиллы можно добавлять в ту же папку `.agents/skills/`.
 
@@ -262,6 +262,6 @@ docs/                        картинки и видео для этой ст
 
 <img src="docs/media/context4-logo.svg" width="56" alt="Context4">
 
-<sub>Сделано в <a href="https://ctx4.me">Context4</a> · MIT — см. <a href="LICENSE">LICENSE</a> · скиллы <code>c4-plan</code> и <code>c4-brainstorm</code> основаны на AgentKit (MIT), см. <a href="NOTICE">NOTICE</a></sub>
+<sub>Сделано в <a href="https://context4.me">Context4</a> · MIT — см. <a href="LICENSE">LICENSE</a> · скиллы <code>c4-plan</code> и <code>c4-brainstorm</code> основаны на AgentKit (MIT), см. <a href="NOTICE">NOTICE</a></sub>
 
 </div>

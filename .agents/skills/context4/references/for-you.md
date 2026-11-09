@@ -1,6 +1,6 @@
 # Personal agent
 
-MCP: `https://ctx4.me/mcp`. [Console and accounts](https://console.ctx4.me/integrations).
+MCP: `https://context4.me/mcp`. [Console and accounts](https://console.context4.me/integrations).
 
 Keep two authorizations distinct: AI client → Context4, and Context4 → provider account. A skill is workflow guidance, not either grant. Connect only the service the task needs; preserve existing eligible connections. When several accounts are available, ask which one is intended.
 

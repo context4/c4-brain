@@ -13,16 +13,16 @@ Use this skill as a router. Identify the job, load only the relevant guidance, t
 
 ## 1. Choose the surface
 
-- A person wants their own AI to use CRM, calls, messages or tasks: use Context4 MCP at `https://ctx4.me/mcp` with browser OAuth.
+- A person wants their own AI to use CRM, calls, messages or tasks: use Context4 MCP at `https://context4.me/mcp` with browser OAuth.
 - A developer integrates an application: preserve its identity model and existing framework; read [Platform](references/platform.md). The supported SDK client is Composio pointed at Context4, not the Composio cloud service.
 - If unclear, ask one short question. Do not turn a documentation question or narrow fix into onboarding.
 
 ## 2. Choose the job
 
-- Setup or missing MCP: read [agent setup](https://ctx4.me/docs/agent-setup.md) and use the `context4-setup` skill if installed.
+- Setup or missing MCP: read [agent setup](https://context4.me/docs/agent-setup.md) and use the `context4-setup` skill if installed.
 - Operate a business service: read [Personal agent](references/for-you.md).
 - Diagnose a failure: read [Errors](references/errors.md).
-- Work across systems: use `context4-workflows` or [business recipes](https://ctx4.me/docs/business-cases.md).
+- Work across systems: use `context4-workflows` or [business recipes](https://context4.me/docs/business-cases.md).
 
 ## Complete the selected job
 
@@ -39,6 +39,6 @@ Preserve workspace/account boundaries. Writes, deletions and messages require a 
 
 ## Canonical information
 
-[Agent bootstrap](https://ctx4.me/docs/agent-setup.md), [documentation index](https://ctx4.me/docs/agent-index.json), [MCP schemas](https://ctx4.me/docs/mcp-tools.md), [provider guidance](https://ctx4.me/docs/agent-providers.md). Open references only as needed. Complete the user's task rather than only returning links.
+[Agent bootstrap](https://context4.me/docs/agent-setup.md), [documentation index](https://context4.me/docs/agent-index.json), [MCP schemas](https://context4.me/docs/mcp-tools.md), [provider guidance](https://context4.me/docs/agent-providers.md). Open references only as needed. Complete the user's task rather than only returning links.
 
 Adapted from the MIT-licensed Composio router; see [attribution](ATTRIBUTION.md) and [license](LICENSE).

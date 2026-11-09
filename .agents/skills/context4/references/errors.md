@@ -11,4 +11,4 @@ Start with the tool result, request ID or execution ID. Identify whether the fai
 - Pending execution: use the actual returned execution mechanism. A global endpoint and a session may expose different tools; use only listed tools.
 - Timeout or failed write: inspect the previous execution before retrying; a provider side effect may already exist.
 
-Never invent a diagnosis from public docs alone. Keep secrets and private provider payloads out of support messages. [Troubleshooting](https://ctx4.me/docs/troubleshooting.md), [results](https://ctx4.me/docs/actions.md).
+Never invent a diagnosis from public docs alone. Keep secrets and private provider payloads out of support messages. [Troubleshooting](https://context4.me/docs/troubleshooting.md), [results](https://context4.me/docs/actions.md).
