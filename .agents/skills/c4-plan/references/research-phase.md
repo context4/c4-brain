@@ -4,6 +4,7 @@ Skip whatever the user already supplied (research notes, file lists). Save findi
 
 ## Codebase scouting
 
+- Follow the `c4-scout` skill (`.agents/skills/c4-scout/SKILL.md`): native file search, maps first, ranked file list. Save its report to `{plan-dir}/reports/`.
 - Search with native file search (glob/grep) and read the matching files. For broad searches, split by area and run subagents in parallel if the runtime offers them; wait for all before analysis.
 - Do not assume a fixed docs layout. Read the repository instructions (`CLAUDE.md`, `AGENTS.md`) and root README first, follow their navigation, and verify documented structure against current files.
 - Record: existing patterns and conventions, configuration and dependencies, integration points, data flow, known debt or inconsistencies.

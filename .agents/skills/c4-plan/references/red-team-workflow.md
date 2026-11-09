@@ -27,4 +27,4 @@ Findings by severity, accepted vs rejected, files modified, sweep results, key r
 
 ## Next steps
 
-Suggest `c4:plan validate <plan-dir>` before implementation. Do not call the plan ready while the sweep reports unresolved contradictions. When the user approves, the next step is to implement the plan phase by phase.
+Suggest `c4-plan validate <plan-dir>` before implementation. Do not call the plan ready while the sweep reports unresolved contradictions. When the user approves, the next step is `c4-cook`.

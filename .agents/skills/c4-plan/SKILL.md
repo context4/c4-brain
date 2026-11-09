@@ -1,18 +1,13 @@
 ---
-name: c4:plan
-description: Create, validate, red-team or archive implementation plans with acceptance criteria and executable phases. Use for planning and roadmaps before implementation starts.
-user-invocable: true
-when_to_use: "Invoke when work needs phases, architecture, or a roadmap."
-category: workflow
-keywords: [planning, architecture, phases, roadmap, validation, red-team]
-argument-hint: "[task] [--auto|--fast|--hard|--deep|--parallel|--two|--debate] [--tdd] [--yagni] [--no-tasks] [--github] OR [validate|red-team|archive] [plan-path]"
+name: c4-plan
+description: "Create, validate, red-team or archive implementation plans with acceptance criteria and executable phases. Use for planning and roadmaps before implementation starts. Invoke when work needs phases, architecture, or a roadmap."
 license: MIT
 metadata:
   author: "c4-brain (adapted from AgentKit ak:plan, MIT)"
   version: "1.0.0"
 ---
 
-# Plan (`c4:plan`)
+# Plan (`c4-plan`)
 
 Create structured, verifiable implementation plans: phased roadmap, file-level steps, success criteria and test commands. This skill plans only; it never implements.
 
@@ -67,7 +62,7 @@ Write plan content (titles, prose, questions to the user) in the user's language
 
 Resolve flags first, then load only the references the selected route needs.
 
-1. **Intake & scope challenge** — read context, restate scope (`references/scope-challenge.md`).
+1. **Intake & scope challenge** — read context, restate scope (`references/scope-challenge.md`). If a `c4-brainstorm` result exists (in the conversation or `wiki/syntheses/`), reuse its outcome, constraints, non-goals and acceptance criteria instead of asking again; if the outcome is still unclear or there are competing approaches, suggest `c4-brainstorm` first.
 2. **Research & scouting** (hard/deep/two/debate) — `references/research-phase.md`.
 3. **Draft** — design the solution (`references/solution-design.md`), then write `plan.md` and phase files (`references/plan-format.md`). Self-verify paths and symbols as you write (`references/verification-roles.md`, Fact Checker).
 4. **Red-team gate** (when the mode requires it) — `references/red-team-workflow.md`.
@@ -81,7 +76,7 @@ Resolve flags first, then load only the references the selected route needs.
 ## Repository integration
 
 - **Project link.** Check whether the plan belongs to an existing project: list `projects/*/README.md` and match by goal and topic. If one clearly matches, set `project: <name>` in `plan.md` frontmatter and add a link to the plan under the `## Планы` heading of `projects/<name>/README.md` (add that heading if the README lacks it): `- [<title>](../../plans/<plan-dir>/plan.md) — <status>`. If the match is uncertain, ask.
-- **Never create a project.** If no project matches, leave `project:` empty. If the work looks like a new project, suggest one line: «Похоже на отдельный проект. Завести через `c4:project`?» — and continue without it.
+- **Never create a project.** If no project matches, leave `project:` empty. If the work looks like a new project, suggest one line: «Похоже на отдельный проект. Завести через `c4-project`?» — and continue without it.
 - **Log.** Append to the root `log.md` (append-only): `## [YYYY-MM-DD] plan | <title>` plus one line with the plan path. Validate, red-team and archive also append a line in the same format (`plan | Validated: <title>`, and so on).
 
 ## References

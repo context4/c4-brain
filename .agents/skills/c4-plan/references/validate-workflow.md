@@ -6,7 +6,7 @@ Verify the plan against the repository, then interview the user with critical qu
 
 1. Path argument, if given.
 2. Otherwise the active plan (see SKILL.md, "Plan location & invariants").
-3. Otherwise ask for a path, or offer `c4:plan --hard`.
+3. Otherwise ask for a path, or offer `c4-plan --hard`.
 
 ## Workflow
 
@@ -29,4 +29,4 @@ Questions asked, decisions confirmed, phases updated, sweep results, recommendat
 
 ## Next steps
 
-If verification shows `Failed: 0` and the sweep has no unresolved contradictions, the plan is ready: offer to implement it phase by phase, ideally in a fresh session that is given the absolute path to `plan.md`. If anything failed, revise first.
+If verification shows `Failed: 0` and the sweep has no unresolved contradictions, the plan is ready: offer to implement it with `c4-cook`, ideally in a fresh session that is given the absolute path to `plan.md`. If anything failed, revise first.
