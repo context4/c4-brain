@@ -16,10 +16,23 @@
 Программировать не нужно. Агент поставит всё сам.
 
 1. **Поставь приложение с агентом:**
-   - [Claude](https://claude.ai/download) — приложение для компьютера, вкладка **Code** (нужна подписка Pro или выше);
-   - или [Codex](https://chatgpt.com/codex) от OpenAI (нужна подписка ChatGPT Plus или выше).
+   - [Claude](https://claude.ai/download) для компьютера, вкладка **Code** (нужна подписка Pro или выше);
+   - или [ChatGPT](https://chatgpt.com/download) для компьютера в режиме **Codex** (нужна подписка Plus или выше).
 2. **Создай пустую папку** на компьютере, например `Документы/brain`. Там будет жить твой мозг.
-3. **Открой эту папку в приложении.** В Claude: вкладка Code → выбрать папку. В Codex: открыть папку как проект.
+3. **Открой эту папку в приложении.**
+
+   **Claude:** вкладка **Code** → внизу под полем ввода нажми на выбор папки → **«Открыть папку…»** → выбери `brain`.
+
+   ![Claude, вкладка Code: выбор папки → «Открыть папку…»](docs/screenshots/claude-01-choose-folder.png)
+
+   **Codex:** в приложении ChatGPT слева вверху переключись на **Codex**.
+
+   ![Переключатель ChatGPT / Codex](docs/screenshots/codex-01-switch-to-codex.png)
+
+   Затем внизу **Choose project** → **New project** → выбери `brain`.
+
+   ![Codex: Choose project → New project](docs/screenshots/codex-02-choose-project.png)
+
 4. **Вставь агенту сообщение:**
 
    > Установи мне второй мозг по инструкции из README: https://github.com/context4/c4-brain
