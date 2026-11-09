@@ -21,9 +21,9 @@
 
 ## Смотри, как это работает
 
-<a href="docs/media/brain-tutorial.mp4"><img src="docs/media/video-poster.png" alt="Видео: установка второго мозга по шагам, 52 секунды" width="100%"></a>
+<a href="https://context4.github.io/c4-brain/docs/media/brain-tutorial.mp4"><img src="docs/media/video-poster.png" alt="Видео: установка второго мозга по шагам, 52 секунды" width="100%"></a>
 
-<p align="center"><sub>52 секунды: папка → Claude или Codex → одно сообщение → первый проект. Нажми на картинку, чтобы открыть видео.</sub></p>
+<p align="center"><sub>52 секунды: папка → Claude или Codex → одно сообщение → первый проект. Нажми на картинку — видео откроется в браузере.</sub></p>
 
 <br>
 
